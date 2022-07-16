@@ -1,13 +1,16 @@
-import { FunctionComponent, useEffect, useState } from 'react';
-import type { database } from '@/data/database';
+import { Fragment, FunctionComponent, useEffect, useState } from 'react';
 import type { DeliveryReceipt } from '@/interfaces';
 
 // Component Import
 import { Table, TableRow, TableColumn, Pagination } from '@/components/ui';
 
+// Util function
+import fetchData from '@/utils/data/fetchData';
+import findPageCount from '@/utils/data/findPageCount';
+
 // Higher Order Component
 const withFetchTableData = (
-    data: database,
+    data: DeliveryReceipt[],
     searchParams = '',
     ItemComponent: FunctionComponent<DeliveryReceipt>,
     tableHeader: string[]
@@ -17,47 +20,58 @@ const withFetchTableData = (
             useState<Array<DeliveryReceipt>>();
 
         // Fetching on hard-coded database from data.ts only allow usage of 3 pages
-        const [currentPage, setCurrentPage] = useState<1 | 2 | 3>(1);
+        const [currentPage, setCurrentPage] = useState(1);
+        const [maxPage, setMaxPage] = useState(0);
 
         //  On component mount, fetch data
         useEffect(() => {
-            // Fetch Presented Data with filtering method
-            const processedData = data[`page/${currentPage}`].filter((item) =>
-                Object.values(item).some((innerItem) =>
-                    (innerItem + '').toLowerCase().includes(searchParams)
-                )
-            );
+            const invokeFetchFunctions = async () => {
+                // Fetch number of pages possible
+                setMaxPage(await findPageCount(data, searchParams));
+                // Fetch data that will be represented
+                const fetchedData = await fetchData(
+                    data,
+                    currentPage,
+                    searchParams
+                );
+                setPresentedData(fetchedData);
+            };
 
-            setPresentedData(processedData);
+            invokeFetchFunctions();
         }, []);
 
+        // Invoke useEffect on change of currentPage state
         useEffect(() => {
-            // Fetch Presented Data with filtering method
-            const processedData = data[`page/${currentPage}`].filter((item) =>
-                Object.values(item).some((innerItem) =>
-                    (innerItem + '').toLowerCase().includes(searchParams)
-                )
-            );
+            const invokeFetchFunctions = async () => {
+                // Fetch data that will be represented
+                setPresentedData(
+                    await fetchData(data, currentPage, searchParams)
+                );
+            };
 
-            setPresentedData(processedData);
+            invokeFetchFunctions();
         }, [currentPage]);
 
-        const changePage = (page: number) => setCurrentPage(page as 1 | 2 | 3);
+        const changePage = (page: number) => setCurrentPage(page);
 
         return (
             <div>
                 <Table>
                     <TableRow>
-                        {tableHeader.map((item) => (
-                            <TableColumn header>{item}</TableColumn>
+                        {tableHeader.map((item, index) => (
+                            <TableColumn header key={index}>
+                                {item}
+                            </TableColumn>
                         ))}
                     </TableRow>
-                    {presentedData?.map((item) => (
-                        <ItemComponent {...item} />
+                    {presentedData?.map((item, index) => (
+                        <Fragment key={index}>
+                            <ItemComponent {...item} />
+                        </Fragment>
                     ))}
                 </Table>
                 <Pagination
-                    maxPage={Object.keys(data).length}
+                    maxPage={maxPage}
                     currentPage={currentPage}
                     changePage={changePage}
                 />

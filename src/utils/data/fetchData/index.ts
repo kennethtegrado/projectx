@@ -9,7 +9,7 @@ const fetchData = async <Type>(
         )
     );
 
-    const paginatedData = filteredData.slice((page - 1) * 10, (page - 1) * 10);
+    const paginatedData = filteredData.slice((page - 1) * 10, page * 10);
 
     return paginatedData;
 };
