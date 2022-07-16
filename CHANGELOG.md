@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/kennethtegrado/projectx/compare/v0.0.1...v0.1.0) (2022-07-16)
+
+
+### Features
+
+* add a responsive delivery receipt table ([6a568f4](https://github.com/kennethtegrado/projectx/commit/6a568f4e917ed035df2a5d4c8fa64f5fa38bfc3c))
+* add dashboard layout component ([7edea1c](https://github.com/kennethtegrado/projectx/commit/7edea1cd237a96002641253e33302111113e37eb))
+* add database and interface for processing delivery receipts ([ca8f5c7](https://github.com/kennethtegrado/projectx/commit/ca8f5c74517fe538dd6f2cde338a17d593220373))
+* add DeliveryItem component data table ([a8a1630](https://github.com/kennethtegrado/projectx/commit/a8a163047c4a9cf226b7c1ad0624e3ae86109fb7))
+* add input group to create search button for the table ([2448e98](https://github.com/kennethtegrado/projectx/commit/2448e981eb5e1384c155a033206ac60f89b89f9f))
+* add pagination component ([fe0757a](https://github.com/kennethtegrado/projectx/commit/fe0757a9f983912309e8a98f293be69932d528cd))
+* add table ui component ([bc4e29d](https://github.com/kennethtegrado/projectx/commit/bc4e29d616a5d17e992fc91d7d414e68de24d6ec))
+* add typography utility class for styling texts ([5d15302](https://github.com/kennethtegrado/projectx/commit/5d15302ef8a3457e202efa52e82d8f0ccb724d1a))
+* add withFetchTableData HOC ([d73662c](https://github.com/kennethtegrado/projectx/commit/d73662c4efd5cd269961f28dfb503c72b09b676e))
+* create makeETA utils to calculate estimated time of arrival ([0434419](https://github.com/kennethtegrado/projectx/commit/0434419f21648a11826754da2be2323530bb9a9f))
+
+### [0.0.1](https://github.com/kennethtegrado/projectx/compare/v0.0.0...v0.0.1) (2022-07-15)
+
+
+### Bug Fixes
+
+* change import alias on tsconfig.json ([6382dc3](https://github.com/kennethtegrado/projectx/commit/6382dc32361142699768ea08643cfdf6ffb0fad1))
+
 ## 0.0.0 (2022-07-15)
 
 

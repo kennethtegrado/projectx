@@ -1,41 +1,106 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-light: #f1f0f6;
+    --primary: #524b65;
+    --accent: #dde1e5;
+    --white: #ffff;
+    --blue: #2087ee;
+    --background: #f7f7f7;
+    --success: #36c879;
+    --warning: #d6b33b;
+    --error: #d6443b;
+    --soft-shadow: -1px 2px 20px rgba(82, 75, 101, 0.2);
+    --smooth-animation: all 0.3s;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html {
+    font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary);
 }
 
-.card {
-  padding: 2em;
+/*
+Typography utility classes
+
+There's no need to modularize these classes to their own
+separate folder because this application is just a small 
+one.
+
+*/
+.heading-one {
+    font-size: 3.815rem;
+    font-weight: 600;
 }
 
-.read-the-docs {
-  color: #888;
+.heading-two {
+    font-size: 3.052rem;
+    font-weight: 600;
+}
+
+.heading-three {
+    font-size: 2.441rem;
+    font-weight: 600;
+}
+
+.heading-four {
+    font-size: 1.953rem;
+    font-weight: 600;
+}
+
+.heading-five {
+    font-size: 1.563rem;
+    font-weight: 600;
+}
+
+.heading-six {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.body {
+    font-size: 1rem;
+}
+
+.caption {
+    font-size: 0.8rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* 
+
+Scrollbar styling
+
+reference: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
+
+*/
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--primary-light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    cursor: pointer;
+    border-radius: 5px;
 }
