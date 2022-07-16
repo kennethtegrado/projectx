@@ -1,3 +1,4 @@
-import makeETA from './data/makeETA';
+// Higher Order Components
+import withFetchTableData from './hoc/withFetchTableData';
 
-export { makeETA };
+export { withFetchTableData };
