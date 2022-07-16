@@ -1,0 +1,20 @@
+.action {
+    font-weight: 500;
+    font-size: 1rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--smooth-animation);
+    padding: 0.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.action:hover {
+    background-color: var(--primary-light);
+}
+
+.action:active {
+    background-color: var(--accent);
+}
