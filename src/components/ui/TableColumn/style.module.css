@@ -1,7 +1,6 @@
 .table__column {
     font-size: 1rem;
     padding: 1rem;
-    color: var(--primary);
 }
 
 .table__column-header {
