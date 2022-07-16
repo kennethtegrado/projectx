@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/kennethtegrado/projectx/compare/v0.1.0...v0.1.1) (2022-07-16)
+
+
+### Features
+
+* add fetchData and findPageCount util function ([5294b3e](https://github.com/kennethtegrado/projectx/commit/5294b3e4174399a6507457e49d7af80183546a8d))
+* add new implementation of database for fetching data ([65d5cc0](https://github.com/kennethtegrado/projectx/commit/65d5cc0829bf186a67bc05aa330954af11db9364))
+* change implementation of project-ui components to accept new data ([2954c3f](https://github.com/kennethtegrado/projectx/commit/2954c3fd0ce5ed504ab0e12c1d972bea38e6ec1c))
+
+
+### Bug Fixes
+
+* add an extra operation on computation of findPageCount ([954173b](https://github.com/kennethtegrado/projectx/commit/954173bed014544566f59dcf4b1526fb74a1ece9))
+* add guard for returning page count for 0 values ([6f1f7c5](https://github.com/kennethtegrado/projectx/commit/6f1f7c5bac4801ad11520d5a106a18ac44fb974f))
+* refactor database and utils function to remove error on render ([75dc28a](https://github.com/kennethtegrado/projectx/commit/75dc28afa878a9318d7c965917350496819e973f))
+
 ## [0.1.0](https://github.com/kennethtegrado/projectx/compare/v0.0.1...v0.1.0) (2022-07-16)
 
 
