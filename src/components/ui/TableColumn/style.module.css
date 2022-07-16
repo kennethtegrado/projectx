@@ -1,0 +1,12 @@
+.table__column {
+    font-size: 1rem;
+    padding: 1rem;
+    color: var(--primary);
+}
+
+.table__column-header {
+    font-weight: 800;
+    background-color: var(--primary-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
