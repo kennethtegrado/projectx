@@ -1,4 +1,4 @@
-import DataTable from './DataTable';
+import DeliveryTable from './DeliveryTable';
 import DeliveryItem from './DeliveryItem';
 
-export { DataTable, DeliveryItem };
+export { DeliveryTable, DeliveryItem };

@@ -6,6 +6,13 @@
     --primary: #524b65;
     --accent: #dde1e5;
     --white: #ffff;
+    --blue: #2087ee;
+    --background: #f7f7f7;
+    --success: #36c879;
+    --warning: #d6b33b;
+    --error: #d6443b;
+    --soft-shadow: -1px 2px 20px rgba(82, 75, 101, 0.2);
+    --smooth-animation: all 0.3s;
 }
 
 * {
@@ -67,4 +74,33 @@ one.
 
 .caption {
     font-size: 0.8rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* 
+
+Scrollbar styling
+
+reference: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
+
+*/
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--primary-light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    cursor: pointer;
+    border-radius: 5px;
 }
