@@ -1,5 +1,6 @@
 .table__container {
     overflow-x: auto;
+    table-layout: fixed;
 }
 
 .table {
