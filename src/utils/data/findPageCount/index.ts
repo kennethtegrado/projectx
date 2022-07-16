@@ -8,6 +8,6 @@ const findPageCount = async <Type>(
         )
     );
 
-    return Math.round(filteredData.length);
+    return Math.round(filteredData.length / 10);
 };
 export default findPageCount;
