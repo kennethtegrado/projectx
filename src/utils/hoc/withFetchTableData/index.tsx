@@ -22,24 +22,24 @@ const withFetchTableData = (
         //  On component mount, fetch data
         useEffect(() => {
             // Fetch Presented Data with filtering method
-            setPresentedData(
-                data[`page/${currentPage}`].filter((item) =>
-                    Object.values(item).some((item: string) =>
-                        item.toLowerCase().includes(searchParams.toLowerCase())
-                    )
+            const processedData = data[`page/${currentPage}`].filter((item) =>
+                Object.values(item).some((innerItem) =>
+                    (innerItem + '').toLowerCase().includes(searchParams)
                 )
             );
+
+            setPresentedData(processedData);
         }, []);
 
         useEffect(() => {
             // Fetch Presented Data with filtering method
-            setPresentedData(
-                data[`page/${currentPage}`].filter((item) =>
-                    Object.values(item).some((item: string) =>
-                        item.toLowerCase().includes(searchParams.toLowerCase())
-                    )
+            const processedData = data[`page/${currentPage}`].filter((item) =>
+                Object.values(item).some((innerItem) =>
+                    (innerItem + '').toLowerCase().includes(searchParams)
                 )
             );
+
+            setPresentedData(processedData);
         }, [currentPage]);
 
         const changePage = (page: number) => setCurrentPage(page as 1 | 2 | 3);
