@@ -1,5 +1,5 @@
 import { FunctionComponent, useState } from 'react';
-import type { database } from '@/data/database';
+import type { DeliveryReceipt } from '@/interfaces';
 
 // Styles import
 import style from './style.module.css';
@@ -11,12 +11,11 @@ import { withFetchTableData } from '@/utils';
 import { InputGroup } from '@/components/ui';
 import DeliveryItem from '../DeliveryItem';
 
-interface DataTableProps {
-    title?: string;
-    data: database;
+interface DeliveryTableProps {
+    data: DeliveryReceipt[];
 }
 
-const DeliveryTable: FunctionComponent<DataTableProps> = ({ title, data }) => {
+const DeliveryTable: FunctionComponent<DeliveryTableProps> = ({ data }) => {
     const Headers = [
         'D.R. Number',
         'Status',
