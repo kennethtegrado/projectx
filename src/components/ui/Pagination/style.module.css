@@ -18,7 +18,7 @@
     align-items: center;
     cursor: pointer;
     border-radius: 50%;
-    transition: var(--smooth-animation);
+    transition: background-color 0.3s;
 }
 
 .button:hover {
