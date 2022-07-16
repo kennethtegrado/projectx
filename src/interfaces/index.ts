@@ -5,10 +5,10 @@ export interface DeliveryReceipt {
     po_number: string;
     skus: string;
     quantity_delivered: number;
-    quantity_accepted: number;
+    quantity_accepted: number | null;
     amount_delivered: number;
-    amount_accepted: undefined | number;
-    type: 'full' | 'not full';
-    delivery_date: Date | undefined;
-    date_created: Date;
+    amount_accepted: null | number;
+    type: 'full' | 'empty';
+    delivery_date: string | null;
+    date_created: string;
 }
