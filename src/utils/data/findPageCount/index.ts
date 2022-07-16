@@ -7,7 +7,10 @@ const findPageCount = async <Type>(
             (nestedItem + '').toLowerCase().includes(searchParams.toLowerCase())
         )
     );
+    const pageCount = Math.round(filteredData.length / 10);
 
-    return Math.round(filteredData.length / 10);
+    if (pageCount === 0) return 1;
+
+    return pageCount;
 };
 export default findPageCount;

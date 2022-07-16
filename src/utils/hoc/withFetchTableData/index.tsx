@@ -57,18 +57,22 @@ const withFetchTableData = (
         return (
             <div>
                 <Table>
-                    <TableRow>
-                        {tableHeader.map((item, index) => (
-                            <TableColumn header key={index}>
-                                {item}
-                            </TableColumn>
+                    <thead>
+                        <TableRow>
+                            {tableHeader.map((item, index) => (
+                                <TableColumn header key={index}>
+                                    {item}
+                                </TableColumn>
+                            ))}
+                        </TableRow>
+                    </thead>
+                    <tbody>
+                        {presentedData?.map((item, index) => (
+                            <Fragment key={index}>
+                                <ItemComponent {...item} />
+                            </Fragment>
                         ))}
-                    </TableRow>
-                    {presentedData?.map((item, index) => (
-                        <Fragment key={index}>
-                            <ItemComponent {...item} />
-                        </Fragment>
-                    ))}
+                    </tbody>
                 </Table>
                 <Pagination
                     maxPage={maxPage}
