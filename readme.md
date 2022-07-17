@@ -18,6 +18,9 @@ A responsive Delivery Receipt table demonstration for InterLeukin.
 <details>
 <summary>Table of Contents</summary>
     <ol>
+         <li>
+            <a href="#comments">Comments</a>
+        </li>
         <li>
             <a href="#getting-started">Getting Started</a>
             <ol>
@@ -45,6 +48,19 @@ A responsive Delivery Receipt table demonstration for InterLeukin.
         </li>
     </ol>
 </details>
+
+## Comments
+
+-   A table with too many columns indicating too many information may be overwhelming for users. To fix this issue, information presented should not exceed ten columns and should only be those that needs emphasis and can be searched with a keyword. Developers should create a new page for the application that can be used to present other information, mimicking a real receipt.
+    ![Table](github/table.png)
+
+    -   The goal of the improvement above is to only show to the medical facilities whether the order have already arrived. If the customer wants to look for more information, they should click the details link.
+
+-   Create a specific page to feature delivery receipts. This page shall contain all the necessery details about their order.
+    ![Delivery Receipt](github/dr_page.png)
+    -   This change ensures that people working with the table will only see the whole details about the delivery receipt if that is their intention. Too much information on the get-go is bad for users who are skimming and looking for specific information about their purchases.
+
+> These comments aim to improve the user experience of people using the Delivery Receipt.
 
 ## Getting Started
 

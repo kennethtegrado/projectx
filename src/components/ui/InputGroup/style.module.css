@@ -19,7 +19,7 @@
     border: 1px solid var(--accent);
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 560px) {
     .form {
         display: flex;
         flex-direction: column;
