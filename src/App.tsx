@@ -1,9 +1,17 @@
+// Component Import
+import { DashboardLayout } from '@/components/layout';
+import { DeliveryReceipt } from '@/components/pages';
+
 // style imports
 import './normalize.css';
-import './global.css';
+import './globals.css';
 
 function App() {
-    return <div>Hello World!</div>;
+    return (
+        <DashboardLayout>
+            <DeliveryReceipt />
+        </DashboardLayout>
+    );
 }
 
 export default App;

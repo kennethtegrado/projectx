@@ -1,8 +1,17 @@
 import type { FunctionComponent } from 'react';
-import styles from './style.module.css';
+
+// Component Import
+import { DeliveryTable } from '@/components/project-ui';
+
+// Data Import
+import database from '@/data/database';
 
 const DeliveryReceipt: FunctionComponent = () => {
-    return <div></div>;
+    return (
+        <>
+            <DeliveryTable data={database} />
+        </>
+    );
 };
 
 export default DeliveryReceipt;
